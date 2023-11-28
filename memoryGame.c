@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <time.h>
+#include <unistd.h>
 
 int main() {
 	//add variables here
 	time_t seconds;
+	char answer;
 	char seed[100];
 	
 	//welcome to the game
@@ -15,8 +17,20 @@ int main() {
 	
 	//read and print txt file here
 	
-	
-	
+	printf("What would you like to do?\n");
+	printf("'g' for a game\n");
+
+	//if statement and countdown
+	scanf(" %c", &answer);
+	if(answer == 'g') {
+		time(&seconds);
+		for(int seconds = 4; seconds > 1; seconds--) {
+			printf("%ld...\n", seconds - 1);
+			sleep(1);
+		}
+	} else { 
+		printf("\nInvalid input. Please press 'g' to start the game.\n");
+	}
 	
 	return 0;
 }
