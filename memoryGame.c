@@ -20,6 +20,7 @@ int main() {
 	printf("What would you like to do?\n");
 	printf("'g' for a game\n");
 
+	//if statement and countdown
 	scanf(" %c", &answer);
 	if(answer == 'g') {
 		time(&seconds);
